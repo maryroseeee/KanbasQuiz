@@ -1,0 +1,89 @@
+body { margin: 0;  padding: 0; }
+body * { font-family:
+        Arial, Helvetica,
+        sans-serif; }
+@media (min-width: 768px) {
+    #wd-kanbas .wd-main-content-offset {
+        padding-left: 140px !important;
+    }
+}
+
+.list-group.wd > .list-group-item.active {
+    color: black !important;
+    background-color: white;
+    border-left: 3px solid black !important;
+}
+
+.completed-assignment-list-item {
+    border-left: 3px solid green !important;
+}
+
+.editor-btn {
+    border-color: #e0e3e5 !important;
+    --bs-border-radius: 10px;
+}
+
+.btn-search {
+    --bs-btn-color: #78838b !important;
+    --bs-btn-bg: #ffffff !important;
+    border-color: #e3e6e8 !important;
+}
+
+.btn-percentage {
+    border-color: #e0e3e5 !important;
+    --bs-border-radius: 20px;
+}
+
+.btn-text {
+    --bs-btn-color: #78838b !important;
+    --bs-btn-bg: #ffffff !important;
+    text-align: left !important;
+}
+
+.btn-assignment {
+    color: #51a173 !important;
+}
+
+.txt-caption {
+    font-size: small !important;
+}
+
+
+.btn-text:focus {
+    border: none;
+
+}
+
+.btn-secondary {
+    --bs-btn-color: #2d3b45 !important;
+    --bs-btn-bg: #f5f5f5 !important;
+    --bs-btn-border-color: #c7cdd1 !important;
+    --bs-btn-hover-color: #2d3b45 !important;
+    --bs-btn-hover-bg: #e8e8e8 !important;
+
+}
+.bg-secondary {
+    --bs-secondary-rgb: 245, 245, 245;
+}
+
+.custom-border {
+    border-width: 3px !important;
+    border-color: #c7cdd1 !important;
+}
+
+.wd-lesson {
+    border-left: 3px solid green !important;
+}
+
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 160px;
+}
+
+.card-body button {
+    align-self: flex-start;
+    margin-top: auto;
+}
