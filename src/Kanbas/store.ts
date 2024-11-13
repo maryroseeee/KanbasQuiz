@@ -11,7 +11,7 @@ const store = configureStore({
         modulesReducer,
         accountReducer,
         assignmentReducer,
-        enrollReducer
+        enrollReducer,
         quizReducer
     },
 });
