@@ -17,7 +17,6 @@ import QuizIndivButtons from "./QuizIndivButtons";
 export default function Quizzes() {
     const { cid } = useParams();
     const quizzes = useSelector((state: any) => state.quizReducer.quizzes);
-    // const assignments = useSelector((state: any) => state.assignmentReducer.assignments);
     const dispatch = useDispatch();
     const { currentUser } = useSelector((state: any) => state.accountReducer);
 
@@ -26,9 +25,9 @@ export default function Quizzes() {
         <li className="wd-quiz list-group-item p-0 mb-2 fs-5 border-gray">
 
             <div className="d-flex justify-content-end mb-2">
-                {currentUser.role === "FACULTY" && ( // Only render ModulesControls if user is FACULTY
+                {currentUser.role === "FACULTY" && ( 
                     <Link
-                        to={`/Kanbas/Courses/${cid}/Quizzes/add`}
+                        to={`/Kanbas/Courses/${cid}/Quizzes/Editor`}
                         className="btn btn-danger btn-lg text-decoration-none text-white"
                     >
                         <FaPlus className="me-2" />
@@ -50,25 +49,26 @@ export default function Quizzes() {
                                 <div className="d-flex justify-content-between align-items-center mb-2">
                                     <div className="d-flex align-items-center">
                                         <AssignmentPrefixButtons />
-                                        {currentUser.role === "FACULTY" ? (
+                                        {/* {currentUser.role === "FACULTY" ? ( */}
                                             <Link
-                                                to={`/Kanbas/Courses/${cid}/Quizzes/${quiz._id}`}
+                                                to={`/Kanbas/Courses/${cid}/Quizzes/Detail/${quiz._id}`}
                                                 className="text-decoration-none text-black"
                                             >
                                                 <span className="ms-2 text-start">{quiz.title}</span>
                                             </Link>
-                                        ) : (
-                                            <span className="ms-2 text-start">{quiz.title}</span>
-                                        )}
+                                        {/* ) : (
+                                            <Link
+                                                to={`/Kanbas/Courses/${cid}/Quizzes/Detail/${quiz._id}`}
+                                                className="text-decoration-none text-black"
+                                            >
+                                                <span className="ms-2 text-start">{quiz.title}</span>
+                                            </Link> */}
+                                        {/* )} */}
 
 
                                     </div>
 
                                     {currentUser.role === "FACULTY" ? (
-                                        // <AssignmentIndivButtons assignmentId={quiz._id}
-                                        //                         deleteAssignment={(assignmentId) => {
-                                        //                             dispatch(deleteAssignment(assignmentId));
-                                        //                         }} />
                                         <QuizIndivButtons quizId={quiz._id}
                                                           deleteQuiz={(quizId) => {
                                                                     dispatch(deleteQuiz(quizId));

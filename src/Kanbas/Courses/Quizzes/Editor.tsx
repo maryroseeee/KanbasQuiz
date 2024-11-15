@@ -35,7 +35,7 @@ export default function QuizEditor() {
     };
 
     useEffect(() => {
-        if (pathname.includes("add")) {
+        if (pathname.includes("Editor")) {
             dispatch(setQuiz(defaultQuiz))
         } else {
             const existingQuiz = quizzes.find((q) => q._id === qid);
@@ -46,7 +46,7 @@ export default function QuizEditor() {
     }, [qid, dispatch]);
     
     const handleSave = () => {
-        if (pathname.includes("add")){
+        if (pathname.includes("Editor")){
             dispatch(addQuiz({...quiz, course: cid}));
         } else {
             dispatch(updateQuiz(quiz))
