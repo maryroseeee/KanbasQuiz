@@ -9,6 +9,8 @@ import AssignmentEditor from "./Assignments/Editor";
 import Quizzes from "./Quizzes";
 import QuizEditor from "./Quizzes/Editor";
 import QuizDetails from "./Quizzes/QuizDetails";
+// import * as quizzesClient from "./Quizzes/client";
+
 
 export default function Courses({ courses }: { courses: any[] }) {
     const { cid } = useParams();

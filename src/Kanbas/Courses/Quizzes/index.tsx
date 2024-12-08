@@ -11,6 +11,8 @@ import AssignmentIndivButtons from "../Assignments/AssignmentIndivButtons";
 import {FaPlus} from "react-icons/fa";
 import LessonControlButtons from "../Modules/LessonControlButtons";
 import * as db from "../../Database";
+// import * as quizzesClient from "./client";
+
 import QuizIndivButtons from "./QuizIndivButtons";
 
 
@@ -71,8 +73,9 @@ export default function Quizzes() {
                                     {currentUser.role === "FACULTY" ? (
                                         <QuizIndivButtons quizId={quiz._id}
                                                           deleteQuiz={(quizId) => {
-                                                                    dispatch(deleteQuiz(quizId));
-                                                                }} />
+                                                                    dispatch(deleteQuiz(quizId))
+                                                                }} 
+                                                          courseId = {quiz.course}/>
                                     ) : (
                                         <LessonControlButtons/>
 
