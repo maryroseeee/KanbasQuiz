@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {IoCalendarOutline} from "react-icons/io5";
+import * as assignmentsClient from "./client";
 import {useLocation, useNavigate, useParams} from "react-router";
 import { assignments } from "../../Database";
 import {useDispatch, useSelector} from "react-redux";
 import {addAssignment, updateAssignment, setAssignment} from "./reducer";
-import {generateAssignmentID} from "./AssignmentIdGenerator";
+import * as coursesClient from "../client";
 
 
 export default function AssignmentEditor() {
@@ -33,16 +33,17 @@ export default function AssignmentEditor() {
             }
         }
     }, [aid, dispatch]);
-    const handleSave = () => {
+    const handleSave = async () => {
         if (pathname.includes("add")){
-            dispatch(addAssignment({...assignment, course: cid}));
+            if (!cid) return;
+            const newAssignment = await coursesClient.createAssignmentForCourse(cid, assignment);
+            dispatch(addAssignment({...assignment}));
         } else {
-            dispatch(updateAssignment(assignment))
+            await assignmentsClient.updateAssignment(assignment);
+            dispatch((updateAssignment(assignment)));
         }
         navigate(`/Kanbas/Courses/${cid}/Assignments`);
     };
-
-
 
     return (
         <div className="container mt-4" id="wd-assignments-editor">

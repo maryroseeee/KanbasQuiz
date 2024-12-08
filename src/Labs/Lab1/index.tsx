@@ -5,15 +5,28 @@ export default function Lab1() {
             <h3>HTML Examples</h3>
             <div id="wd-h-tag">
                 <h4>Heading Tags</h4>
-                Text documents are often broken up into several sections and subsections. Each section is usually prefaced with a short title or heading that attempts to summarize the topic of the section it precedes. For instance this paragraph is preceded by the heading Heading Tags. The font of the section headings are usually larger and bolder than their subsection headings. This document uses headings to introduce topics such as HTML Documents, HTML Tags, Heading Tags, etc. HTML heading tags can be used to format plain text so that it renders in a browser as large headings. There are 6 heading tags for different sizes: h1, h2, h3, h4, h5, and h6. Tag h1 is the largest heading and h6 is the smallest heading.
+                Text documents are often broken up into several sections and subsections. 
+                    Each section is usually prefaced with a short title or heading that attempts 
+                    to summarize the topic of the section it precedes. For instance this paragraph 
+                    is preceded by the heading Heading Tags. The font of the section headings are 
+                    usually larger and bolder than their subsection headings. This document uses 
+                    headings to introduce topics such as HTML Documents, HTML Tags, Heading Tags, 
+                    etc. HTML heading tags can be used to format plain text so that it renders in 
+                    a browser as large headings. There are 6 heading tags for different sizes: 
+                    h1, h2, h3, h4, h5, and h6. Tag h1 is the largest heading and h6 is the smallest 
+                    heading.
             </div>
-
             <div id="wd-p-tag">
                 <h4>Paragraph Tag</h4>
-                <p id="wd-p-1"> ... </p>
+                <p id="wd-p-1">
+                    This is a paragraph. We often separate a long set of sentences with vertical spaces 
+                    to make the text easier to read. Browsers ignore vertical white spaces and render 
+                    all the text as one single set of sentences. To force the browser to add vertical 
+                    spacing, wrap the paragraphs you want to separate with the paragraph tag
+                </p>
                 <p id="wd-p-2">
-                    This is the first paragraph. The paragraph tag is used to format
-                    vertical gaps between long pieces of text like this one.
+                    This is the first paragraph. The paragraph tag is used to format vertical gaps between 
+                    long pieces of text like this one.
                 </p>
                 <p id="wd-p-3">
                     This is the second paragraph. Even though there is a deliberate white
@@ -22,10 +35,10 @@ export default function Lab1() {
                     the right.
                 </p>
                 <p id="wd-p-4">
-                    This is the third paragraph. Wrap each paragraph with the paragraph
-                    tag to tell browsers to render the gaps.
-                </p>
+                    This is the third paragraph. Wrap each paragraph with the paragraph tag to tell 
+                    browsers to render the gaps.
 
+                </p>
             </div>
             <div id="wd-lists">
                 <h4>List Tags</h4>
@@ -41,14 +54,17 @@ export default function Lab1() {
                     <li>Flip and cook the other side.</li>
                     <li>Serve and enjoy!</li>
                 </ol>
-            My favorite recipe:
-            <ol id="wd-penne-alla-vodka">
-                    <li>Saute onion and garlic.</li>
-                    <li>Add tomato paste and heavy cream.</li>
-                    <li>Add parmesan, red pepper flakes, and pasta water.</li>
-                    <li>Add cooked pasta.</li>
+                My favorite recipe:
+                Grilled Cheese
+                <ol id="wd-your-favorite-recipe">
+                    <li>Turn stove onto low and warm up pan.</li>
+                    <li>Spread butter onto one side of each slice of bread.</li>
+                    <li>Place one slice of bread, then a cheese slice, and finally the other bread onto warm pan.</li>
+                    <li>Cook until bottom bread is crispy.</li>
+                    <li>Flip onto other side.</li>
+                    <li>Cook until crispy.</li>
                     <li>Serve and enjoy!</li>
-            </ol>
+                </ol>
                 <h5>Unordered List Tag</h5>
                 My favorite books (in no particular order)
                 <ul id="wd-my-books">
@@ -60,66 +76,65 @@ export default function Lab1() {
                 </ul>
                 Your favorite books (in no particular order)
                 <ul id="wd-your-books">
-                    <li>Crime and Punishment</li>
-                    <li>Play it as it Lays</li>
-                    <li>The Woman Destroyed</li>
-                    <li>The Metamorphosis</li>
-                    <li>The Forever War</li>
+                    <li>Dance of Theives series</li>
+                    <li>Circe</li>
+                    <li>Love Hypothesis</li>
+                    <li>Punk 57</li>
+                    <li>The Seven Husbands of Evelyn Hugo</li>
                 </ul>
-            </div>
+            </div>    
             <div id="wd-tables">
                 <h4>Table Tag</h4>
                 <table border={1} width="100%">
                     <thead>
-                    <tr>
+                        <tr>
                         <th>Quiz</th>
                         <th>Topic</th>
                         <th>Date</th>
                         <th>Grade</th>
-                    </tr>
+                        </tr>
                     </thead>
                     <tbody>
-                    <tr>
+                        <tr>
                         <td>Q1</td>
                         <td>HTML</td>
                         <td>2/3/21</td>
                         <td>85</td>
-                    </tr>
-                    <tr>
+                        </tr>
+                        <tr>
                         <td>Q2</td>
                         <td>CSS</td>
                         <td>2/10/21</td>
                         <td>90</td>
-                    </tr>
-                    <tr>
+                        </tr>
+                        <tr>
                         <td>Q3</td>
                         <td>JavaScript</td>
                         <td>2/17/21</td>
                         <td>95</td>
-                    </tr>
+                        </tr>
                     </tbody>
                     <tfoot>
-                    <tr>
+                        <tr>
                         <td colSpan={3}>Average</td>
                         <td>90</td>
-                    </tr>
+                        </tr>
                     </tfoot>
                 </table>
             </div>
-            <div id="wd-images">
+        `   <div id="wd-images">
                 <h4>Image tag</h4>
                 Loading an image from the internet:
                 <br />
-                <img id="wd-starship"
-                     width="400px"
-                     src="https://www.staradvertiser.com/wp-content/uploads/2021/08/web1_Starship-gap2.jpg"
+                <img alt="starship" id="wd-starship"
+                    width="400px"
+                src="https://www.staradvertiser.com/wp-content/uploads/2021/08/web1_Starship-gap2.jpg"
                 />
                 <br />
                 Loading a local image:
                 <br />
-                <img id="wd-teslabot" src="images/teslabot.jpg" height="200px" />
-            </div>
-
+                <img alt="teslabot" id="wd-teslabot" src="images/teslabot.jpeg" height="200px" />
+            </div>`
             <div id="wd-forms">
                 <h4>Form Elements</h4>
                 <form id="wd-text-fields">
@@ -133,26 +148,30 @@ export default function Lab1() {
                     <input type="text" id="wd-text-fields-first-name" title="John" /> <br />
                     <label htmlFor="wd-text-fields-last-name">Last name:</label>
                     <input type="text" id="wd-text-fields-last-name" placeholder="Doe"
-                           value="Wonderland" title="The last name" />
+                    value="Wonderland" title="The last name" />
                     {/* copy rest of form elements here  */}
                 </form>
+
                 <h5>Text boxes</h5>
                 <label>Biography:</label><br/>
-                <textarea id="wd-textarea" cols={30} rows={15}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </textarea>
+                <textarea id="wd-textarea" cols={30} rows={10}>
+                    Lorem ipsum dolor sit amet, 
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                    officia deserunt mollit anim id est laborum.
+                </textarea>
+
                 <h5 id="wd-buttons">Buttons</h5>
-                <button id="wd-all-good" onClick={() => alert("Life is Good!")}>
-                    Hello World!
+                <button id="wd-all-good" onClick={() => alert("Life is Good!")} type="button">
+                Hello World!
                 </button>
+
                 <h5>File upload</h5>
                 <input id="wd-upload" type="file"/>
+
                 <h5 id="wd-radio-buttons">Radio buttons</h5>
 
                 <label>Favorite movie genre:</label><br />
@@ -184,61 +203,58 @@ export default function Lab1() {
                 <input type="checkbox" name="check-genre" id="wd-chkbox-fantasy"/>
                 <label htmlFor="wd-chkbox-fantasy">Fantasy</label>
 
-
                 <h4 id="wd-dropdowns">Dropdowns</h4>
 
                 <h5>Select one</h5>
                 <label htmlFor="wd-select-one-genre"> Favorite movie genre: </label><br/>
                 <select id="wd-select-one-genre">
-                    <option value="COMEDY">Comedy</option>
-                    <option value="DRAMA">Drama</option>
-                    <option selected value="SCIFI">
-                        Science Fiction</option>
-                    <option value="FANTASY">Fantasy</option>
+                <option value="COMEDY">Comedy</option>
+                <option value="DRAMA">Drama</option>
+                <option selected value="SCIFI">
+                    Science Fiction</option>
+                <option value="FANTASY">Fantasy</option>
                 </select>
 
                 <h5>Select many</h5>
                 <label htmlFor="wd-select-many-genre"> Favorite movie genres: </label><br/>
                 <select id="wd-select-many-genre" multiple>
-                    <option selected value="COMEDY">Comedy</option>
-                    <option value="DRAMA">Drama</option>
-                    <option selected value="SCIFI">
-                        Science Fiction</option>
-                    <option value="FANTASY">Fantasy</option>
+                <option selected value="COMEDY">Comedy</option>
+                <option value="DRAMA">Drama</option>
+                <option selected value="SCIFI">
+                    Science Fiction</option>
+                <option value="FANTASY">Fantasy</option>
                 </select>
 
                 <h4>Other HTML field types</h4>
 
                 <label htmlFor="wd-text-fields-email"> Email: </label>
                 <input type="email"
-                       placeholder="jdoe@somewhere.com"
-                       id="wd-text-fields-email"/><br/>
+                    placeholder="jdoe@somewhere.com"
+                    id="wd-text-fields-email"/><br/>
 
                 <label htmlFor="wd-text-fields-salary-start"> Starting salary:
                 </label>
                 <input type="number"
-                       id="wd-text-fields-salary-start"
-                       placeholder="1000"
-                       value="100000"/><br/>
+                    id="wd-text-fields-salary-start"
+                    placeholder="1000"
+                    value="100000"/><br/>
 
                 <label htmlFor="wd-text-fields-rating"> Rating: </label>
                 <input type="range" id="wd-text-fields-rating"
-                       placeholder="Doe"
-                       max="5"
-                       value="4"/><br/>
+                    placeholder="Doe"
+                    max="5"
+                    value="4"/><br/>
 
                 <label htmlFor="wd-text-fields-dob"> Date of birth: </label>
                 <input type="date"
-                       id="wd-text-fields-dob"
-                       value="2000-01-21"/><br/>
-
-                <h4>Anchor tag</h4>
-                Please
-                <a id="wd-lipsum" href="https://www.lipsum.com">click here</a>
-                to get dummy text<br/>
+                    id="wd-text-fields-dob"
+                    value="2000-01-21"/><br/>
             </div>
-
-
+            <h4>Anchor tag</h4>
+            Please
+            <a id="wd-lipsum" href="https://www.lipsum.com">click here</a>
+            to get dummy text<br/>
         </div>
     );
-}
+  }
+  

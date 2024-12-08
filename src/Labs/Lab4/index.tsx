@@ -1,36 +1,38 @@
-import ArrayStateVariable from "./ArrayStateVariable";
-import BooleanStateVariables from "./BooleanStateVariables";
-import ClickEvent from "./ClickEvent";
-import Counter from "./Counter";
-import EventObject from "./EventObject";
-import ObjectStateVariable from "./ObjectStateVariable";
-import ParentStateComponent from "./ParentStateComponent";
-import PassingFunctions from "./PassingFunctions";
 import ReduxExamples from "./ReduxExamples";
-import StringStateVariables from "./StringStateVariables";
+import TodoList from "./ReduxExamples/todos/TodoList";
+import ArrayStateVariable from "./util/ArrayStateVariable";
+import BooleanStateVariables from "./util/BooleanStateVariable";
+import ClickEvent from "./util/ClickEvent";
+import Counter from "./util/Counter";
+import DateStateVariable from "./util/DateStateVariable";
+import EventObject from "./util/EventObject";
+import ObjectStateVariable from "./util/ObjectStateVariable";
+import ParentStateComponent from "./util/ParentStateComponent";
+import PassingDataOnEvent from "./util/PassingDataOnEvents";
+import PassingFunctions from "./util/PassingFunctions";
+import StringStateVariables from "./util/StringStateVariables";
 
 export default function Lab4() {
     function sayHello() {
-        alert("Hello");
+        alert("Hello")
     }
 
     return (
-        <div>
+        <div id="wd-passing-functions">
             <h2>Lab 4</h2>
-            <ClickEvent />
-            <PassingFunctions theFunction={sayHello} />
-            <EventObject />
-            <Counter />
-            <BooleanStateVariables />
-            <StringStateVariables />
-            <ObjectStateVariable />
-            <ArrayStateVariable />
-            <ParentStateComponent />
-            <ReduxExamples />
-            <br />
-            <br />
-            <br />
-            <br />
+            <ClickEvent/>
+            <PassingDataOnEvent/>
+            <PassingFunctions theFunction={sayHello}/>
+            <EventObject/>
+            <Counter/>
+            <BooleanStateVariables/>
+            <StringStateVariables/>
+            <DateStateVariable/>
+            <ObjectStateVariable/>
+            <ArrayStateVariable/>
+            <ParentStateComponent/>
+            <ReduxExamples/>
+            <TodoList/>
         </div>
     );
 }
